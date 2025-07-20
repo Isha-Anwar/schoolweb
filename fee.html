@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Fees</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(90deg, #004080, #0073e6);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            background: #0055a5;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: 500;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        nav a:hover {
+            background: #004080;
+            border-radius: 5px;
+            transform: scale(1.1);
+        }
+
+        section {
+            margin: 40px auto;
+            padding: 20px;
+            max-width: 800px;
+            background: #f9f9f9;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            color: #004080;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .fee-details, .payment-method {
+            margin-top: 20px;
+            text-align: left;
+            display: none;
+        }
+
+        .fee-details p, .payment-method p {
+            font-size: 1.2rem;
+            margin: 5px 0;
+        }
+
+        .payment-method label {
+            display: block;
+            margin: 10px 0;
+            font-size: 1rem;
+        }
+
+        .payment-method input {
+            margin-right: 10px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            section {
+                width: 90%;
+                padding: 15px;
+            }
+
+            section h2 {
+                font-size: 2rem;
+            }
+
+            nav a {
+                font-size: 16px;
+                padding: 8px;
+            }
+        }
+        footer {
+            background: #004080;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Student Fees</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="add_student.html">Add Student</a>
+        <a href="result.html">Results</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <section>
+        <h2>Check and Pay Your Fees</h2>
+        <form id="feeForm">
+            <input type="text" id="student-id" name="student-id" value="111" required oninput="resetDetails()">
+            <button type="button" onclick="showFees()">Check Fees</button>
+        </form>
+        <div class="fee-details" id="feeDetails">
+            <p><strong>Student Name:</strong> Isha Anwar</p>
+            <p><strong>Class:</strong> BS IT </p>
+            <p><strong>Tuition Fee:</strong> 2450</p>
+            <p><strong>Transport Fee:</strong> 1190</p>
+            <p><strong>Other Fees:</strong> 940</p>
+            <p><strong>Total Fee:</strong> 4,580</p>
+        </div>
+        <div class="payment-method" id="paymentMethod">
+            <h3>Available Payment Methods:</h3>
+            <label><input type="radio" name="payment" value="HBL"> HBL</label>
+            <label><input type="radio" name="payment" value="UBL"> UBL</label>
+            <label><input type="radio" name="payment" value="EasyPaisa"> EasyPaisa</label>
+            <label><input type="radio" name="payment" value="JazzCash"> JazzCash</label>
+        </div>
+    </section>
+
+    <footer>
+        &copy; Isha Anwar. All rights reserved.
+    </footer>
+
+    <script>
+        function showFees() {
+            const studentId = document.getElementById('student-id').value;
+            const feeDetails = document.getElementById('feeDetails');
+            const paymentMethod = document.getElementById('paymentMethod');
+
+            if (studentId === "111") {
+                feeDetails.style.display = "block";
+                paymentMethod.style.display = "block";
+            } else {
+                feeDetails.style.display = "none";
+                paymentMethod.style.display = "none";
+                alert('Student ID not found. Please try again.');
+            }
+        }
+
+        function resetDetails() {
+            document.getElementById('feeDetails').style.display = "none";
+            document.getElementById('paymentMethod').style.display = "none";
+        }
+    </script>
+</body>
+</html>

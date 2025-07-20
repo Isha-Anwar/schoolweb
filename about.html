@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - School</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(90deg, #004080, #0073e6);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            background: #0055a5;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: 500;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        nav a:hover {
+            background: #004080;
+            border-radius: 5px;
+            transform: scale(1.1);
+        }
+
+        section {
+            margin: 40px auto;
+            padding: 20px;
+            max-width: 800px;
+            background: #f9f9f9;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            color: #004080;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        section p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .school-info, .mission, .vision {
+            margin-top: 20px;
+        }
+
+        .school-info h3, .mission h3, .vision h3 {
+            font-size: 1.8rem;
+            color: #004080;
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            section {
+                width: 90%;
+                padding: 15px;
+            }
+
+            section h2 {
+                font-size: 2rem;
+            }
+
+            nav a {
+                font-size: 16px;
+                padding: 8px;
+            }
+        }
+        footer {
+            background: #004080;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Our School</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="add_student.html">Add Student</a>
+        <a href="result.html">Results</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <section>
+        <h2>Welcome to Our School</h2>
+        <p>Our school has been providing quality education to students for over two decades. We are dedicated to nurturing young minds and helping them reach their full potential in a safe and stimulating environment.</p>
+
+        <div class="school-info">
+            <h3>Our History</h3>
+            <p>Founded in 1990, our school has grown from a small community-based institution to a well-established educational facility, recognized for its academic excellence and holistic approach to student development.</p>
+            <p>We pride ourselves on a tradition of providing personalized learning experiences that cater to each student's unique needs and aspirations.</p>
+        </div>
+
+        <div class="mission">
+            <h3>Our Mission</h3>
+            <p>To provide a dynamic learning environment that fosters creativity, critical thinking, and personal growth. We aim to empower students with the knowledge and skills they need to thrive academically and in life.</p>
+        </div>
+
+        <div class="vision">
+            <h3>Our Vision</h3>
+            <p>To be a leading institution that prepares students for success in an ever-changing world, ensuring they have the tools, resources, and opportunities to excel in their future careers.</p>
+        </div>
+    </section>
+    <footer>
+        &copy; Isha Anwar. All rights reserved.
+    </footer>
+</body>
+</html>

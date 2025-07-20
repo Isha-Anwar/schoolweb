@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - School</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(90deg, #004080, #0073e6);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            background: #0055a5;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: 500;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        nav a:hover {
+            background: #004080;
+            border-radius: 5px;
+            transform: scale(1.1);
+        }
+
+        section {
+            margin: 40px auto;
+            padding: 20px;
+            max-width: 800px;
+            background: #f9f9f9;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            color: #004080;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .contact-info, .contact-form {
+            margin-top: 20px;
+        }
+
+        .contact-info p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .contact-form button {
+            padding: 10px 20px;
+            background: #004080;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: #0073e6;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            section {
+                width: 90%;
+                padding: 15px;
+            }
+
+            section h2 {
+                font-size: 2rem;
+            }
+
+            nav a {
+                font-size: 16px;
+                padding: 8px;
+            }
+        }
+        footer {
+            background: #004080;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="add_student.html">Add Student</a>
+        <a href="result.html">Results</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <section>
+        <h2>Get in Touch</h2>
+        <div class="contact-info">
+            <p><strong>Address:</strong> New Islam Pura Toba Tek Singh</p>
+            <p><strong>Phone:</strong> +92 300 0000000</p>
+            <p><strong>Email:</strong> ishaanwar108@gmail.com</p>
+        </div>
+
+        <div class="contact-form">
+            <h3>Send us a Message</h3>
+            <form id="contactForm">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <textarea id="message" name="message" placeholder="Your Message" rows="6" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <footer>
+            &copy; Isha Anwar. All rights reserved.
+        </footer>
+    </section>
+</body>
+</html>
